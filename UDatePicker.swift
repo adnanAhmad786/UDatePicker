@@ -123,13 +123,13 @@ open class UDatePicker: UIViewController {
             doneButton.addTarget(self, action: #selector(self.handleDoneButton), for: .touchUpInside)
         }
         
-        func handleBlankView() {
+        @objc func handleBlankView() {
             if completion != nil {
                 completion!(nil)
             }
         }
         
-        func handleDoneButton() {
+        @objc func handleDoneButton() {
             if completion != nil {
                 completion!(datePicker.date)
             }
